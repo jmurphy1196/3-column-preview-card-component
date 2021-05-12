@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 67%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --trans-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-grey: hsl(0, 0%, 95%);
+}
+
+.is-rounded {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.cards__container {
+  margin-top: 100px;
+  display: flex;
+  width: 80%;
+  height: 100%;
+}
+.cards__container .card {
+  width: 100%;
+}
+
+.card--orange {
+  background-color: var(--bright-orange);
+}
+.card--cyan {
+  background-color: var(--dark-cyan);
+}
+.card--dark-cyan {
+  background-color: var(--very-dark-cyan);
+}
+
+.mt-small {
+  margin-top: 2.5rem;
+}
+.mt-medium {
+  margin-top: 3.5rem;
+}
+.mt-large {
+  margin-top: 5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  color: white;
+  padding: 7rem 7rem;
+  font-family: "Lexend Deca";
+  font-weight: 400;
+  position: relative;
+}
+
+.card__header {
+  font-family: "Big Shoulders Display";
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.card__content {
+  color: var(--trans-white);
+  line-height: 1.5;
+  font-size: 1.5em;
+}
+
+.card__footer {
+  margin-top: 13rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.5rem 2.5rem;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  background-color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:active {
+  transform: translateY(-5px);
+}
+
+.btn--orange {
+  color: var(--bright-orange);
+}
+.btn--cyan {
+  color: var(--dark-cyan);
+}
+.btn--dark-cyan {
+  color: var(--very-dark-cyan);
+}
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 65%;
+  }
+  body {
+    padding: 5rem 1.2rem;
+  }
+  .cards__container {
+    flex-direction: column;
+  }
+  .card__footer {
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 55%;
+  }
+
+  .card {
+    padding: 5rem 5rem;
+  }
+  .cards__container {
+    margin-top: 0;
+  }
+}
